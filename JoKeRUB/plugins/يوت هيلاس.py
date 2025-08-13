@@ -4,7 +4,7 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from JoKeRUB import l313l
+from zelz import zedub
 from telethon import events
 
 # إنشاء مجلد التنزيلات
@@ -34,7 +34,7 @@ def get_audio_from_clipto(youtube_url):
     finally:
         driver.quit()
 
-@l313l.on(events.NewMessage(pattern=r"^.تحميل يوت (.+)"))
+@zedub.on(events.NewMessage(pattern=r"^.تحميل يوت (.+)"))
 async def clipto_download(event):
     query = event.pattern_match.group(1).strip()
     if not query:
